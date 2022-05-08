@@ -1,0 +1,32 @@
+{
+    "name": "inject",
+    "version": "1.0",
+    "manifest_version": 3,
+    "content_scripts": [
+        {
+            "matches": [
+                "*://www.spareroom.co.uk/flatshare/flatshare_detail*",
+                "*://www.spareroom.co.uk/flatshare/london*"
+            ],
+            "js": [
+                "inject.js"
+            ]
+        }
+    ],
+    "host_permissions": [
+        "<all_urls>"
+    ],
+    "permissions": [
+        "<all_urls>"
+    ],
+    "web_accessible_resources": [
+        {
+            "resources": [
+                "create_map.js"
+            ],
+            "matches": [
+                "<all_urls>"
+            ]
+        }
+    ]
+}
